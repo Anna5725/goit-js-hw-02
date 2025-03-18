@@ -1,21 +1,9 @@
 function checkForSpam(message){
 const hasSpam = message.toLowerCase().includes('spam');
 const hasSale = message.toLowerCase().includes ('sale');
-if (message = hasSpam||hasSale){
-    return true;
+let checkForSpam = hasSpam||hasSale ? hasSpam : hasSale;
+return hasSpam || hasSale;
 }
-else{
-    return false;
-}
-}
-
-checkForSpam("Latest technology news");
-checkForSpam("JavaScript weekly newsletter");
-checkForSpam("Get best sale offers now!");
-checkForSpam("Amazing SalE, only tonight!");
-checkForSpam("Trust me, this is not a spam message");
-checkForSpam("Get rid of sPaM emails. Our book in on sale!");
-checkForSpam("[SPAM] How to earn fast money?");
 
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
