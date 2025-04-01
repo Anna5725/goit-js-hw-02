@@ -15,7 +15,6 @@ switch(country){
 default:
     return 'Sorry, there is no delivery to your country';
     }
-
 }
 
 console.log(getShippingCost("Australia")); // "Shipping to Australia will cost 170 credits"
